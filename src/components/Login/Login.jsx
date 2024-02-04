@@ -41,7 +41,7 @@ const Login = () => {
         </div>
       </nav>
       <section className='container__section'>
-        <h1>Welcome to the auto genrate lofi music made by Phuc Le.</h1>
+        <h1>Welcome to the auto genrate lofi music made by Ken Chen.</h1>
         <h1>Login to explore the feature</h1>
         <div className='form'>
           <div className='icon' onClick={signInHandler}>
