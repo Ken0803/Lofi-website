@@ -1,20 +1,18 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import './About.scss';
-
 const About = () => {
   return (
     <div className='container'>
       <nav className='container__nav'>
-        <Link to='/home'>
+        <Link to='/'>
           <img src='/assets/icons/lofi-logo.gif' alt='' />
         </Link>
         <div className='nav-menu'>
           <a
             target='_blank'
             rel='noreferrer'
-            href='https://www.linkedin.com/in/phuc-le-vinh/'
+            href='https://www.linkedin.com/in/ken-chen-a46474299/'
           >
             <i className='fab fa-linkedin'></i>
             <span>Linkedin</span>
@@ -22,7 +20,7 @@ const About = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            href='https://github.com/phuclevinh2000/Lofi-website'
+            href='https://github.com/Ken0803/Lofi-website'
           >
             <i className='fab fa-github'></i>
             <span>GitHub</span>
@@ -34,7 +32,7 @@ const About = () => {
         </div>
       </nav>
       <section className='description'>
-        <h1>Welcome to the auto genrate lofi music made by Phuc Le.</h1>
+        <h1>Welcome to the auto genrate lofi music made by Ken Chen.</h1>
         <h1>The purpose of this application is for learning</h1>
         <h1>This is a web application inspired by Lofi.co.</h1>
         <h1>
@@ -49,5 +47,4 @@ const About = () => {
     </div>
   );
 };
-
 export default About;

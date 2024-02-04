@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { signOutAPI, changeDayNight } from '../../redux/actions';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import DarkLightSwitch from '../DarkLightSwitch/DarkLightSwitch';
-
 const Header = () => {
   const [fullscreen, setFullscreen] = useState(false);
   const data = useSelector((state) => state.userState);
   const daynight = useSelector((state) => state.modeState);
   const dispatch = useDispatch();
-
   const { user } = data;
   const { mode } = daynight;
-
   const signOutHandler = () => {
     dispatch(signOutAPI());
   };
-
   const daynightHandler = () => {
     dispatch(changeDayNight(mode));
   };
-
   const fullscreenHandler = () => {
     if (!fullscreen) {
       setFullscreen(true);
@@ -41,7 +35,6 @@ const Header = () => {
       }
     }
   };
-
   return (
     <nav className='wrap'>
       <Link to='/'>
@@ -55,7 +48,7 @@ const Header = () => {
         <a
           target='_blank'
           rel='noreferrer'
-          href='https://github.com/phuclevinh2000/Lofi-website'
+          href='https://github.com/Ken0803/Lofi-website'
         >
           <i className='fab fa-github'></i>
           <span>GitHub</span>
@@ -65,7 +58,6 @@ const Header = () => {
         <div onClick={daynightHandler}>
           <DarkLightSwitch theme={mode} />
         </div>
-
         <button onClick={fullscreenHandler} className='fullscreen-btn'>
           <i className='fas fa-expand fa-lg'></i>
         </button>
@@ -90,5 +82,4 @@ const Header = () => {
     </nav>
   );
 };
-
 export default Header;

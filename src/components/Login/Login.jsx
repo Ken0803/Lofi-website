@@ -1,31 +1,27 @@
 import React from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { signInAPI } from '../../redux/actions';
 import './Login.scss';
-
 const Login = () => {
   const data = useSelector((state) => state.userState);
   const dispatch = useDispatch();
   const { user } = data;
-
   const signInHandler = () => {
     dispatch(signInAPI());
   };
-
   return (
     <div className='container'>
       {user !== null && <Navigate to='/' />}
       <nav className='container__nav'>
-        <Link to='/home'>
+        <Link to='/'>
           <img src='/assets/icons/lofi-logo.gif' alt='' />
         </Link>
         <div className='nav-menu'>
           <a
             target='_blank'
             rel='noreferrer'
-            href='https://www.linkedin.com/in/phuc-le-vinh/'
+            href='https://www.linkedin.com/in/ken-chen-a46474299/'
           >
             <i className='fab fa-linkedin'></i>
             <span>Linkedin</span>
@@ -33,7 +29,7 @@ const Login = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            href='https://github.com/phuclevinh2000/Lofi-website'
+            href='https://github.com/Ken0803/Lofi-website'
           >
             <i className='fab fa-github'></i>
             <span>GitHub</span>
@@ -57,5 +53,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
