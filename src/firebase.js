@@ -7,7 +7,7 @@ import 'firebase/storage'; // for storage
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDU-fiL677eKa2VrxSNCXpQj98nMgXx6Rg",
-  authDomain: "lofi-clone.firebaseapp.com",
+  authDomain: "lofi-website-murex.vercel.app",
   projectId: "lofi-clone",
   storageBucket: "lofi-clone.appspot.com",
   messagingSenderId: "302897543450",
